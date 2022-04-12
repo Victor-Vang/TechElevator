@@ -30,24 +30,24 @@ namespace ClarityVenturesEmailDemo
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textRecipient = new System.Windows.Forms.TextBox();
             this.recipientText = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sendButton = new System.Windows.Forms.Button();
             this.subjectText = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textSubject = new System.Windows.Forms.TextBox();
             this.messageText = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textMessageBody = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textRecipient
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(409, 23);
-            this.textBox1.TabIndex = 0;
+            this.textRecipient.Location = new System.Drawing.Point(90, 196);
+            this.textRecipient.Name = "textRecipient";
+            this.textRecipient.Size = new System.Drawing.Size(409, 23);
+            this.textRecipient.TabIndex = 0;
             // 
             // recipientText
             // 
@@ -79,6 +79,7 @@ namespace ClarityVenturesEmailDemo
             this.sendButton.TabIndex = 3;
             this.sendButton.Text = "Send";
             this.sendButton.UseVisualStyleBackColor = false;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // subjectText
             // 
@@ -90,12 +91,12 @@ namespace ClarityVenturesEmailDemo
             this.subjectText.TabIndex = 5;
             this.subjectText.Text = "Subject:";
             // 
-            // textBox2
+            // textSubject
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 225);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(409, 23);
-            this.textBox2.TabIndex = 4;
+            this.textSubject.Location = new System.Drawing.Point(90, 225);
+            this.textSubject.Name = "textSubject";
+            this.textSubject.Size = new System.Drawing.Size(409, 23);
+            this.textSubject.TabIndex = 4;
             // 
             // messageText
             // 
@@ -107,13 +108,13 @@ namespace ClarityVenturesEmailDemo
             this.messageText.TabIndex = 7;
             this.messageText.Text = "Message:";
             // 
-            // textBox3
+            // textMessageBody
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 254);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(409, 165);
-            this.textBox3.TabIndex = 6;
+            this.textMessageBody.Location = new System.Drawing.Point(90, 254);
+            this.textMessageBody.Multiline = true;
+            this.textMessageBody.Name = "textMessageBody";
+            this.textMessageBody.Size = new System.Drawing.Size(409, 165);
+            this.textMessageBody.TabIndex = 6;
             // 
             // closeButton
             // 
@@ -135,13 +136,13 @@ namespace ClarityVenturesEmailDemo
             this.ClientSize = new System.Drawing.Size(579, 494);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.messageText);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textMessageBody);
             this.Controls.Add(this.subjectText);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textSubject);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.recipientText);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textRecipient);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -152,14 +153,14 @@ namespace ClarityVenturesEmailDemo
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textRecipient;
         private System.Windows.Forms.Label recipientText;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Label subjectText;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textSubject;
         private System.Windows.Forms.Label messageText;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textMessageBody;
         private System.Windows.Forms.Button closeButton;
     }
 }

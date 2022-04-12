@@ -15,13 +15,13 @@ USE email_log
 GO
 
 --create tables
-CREATE TABLE email_log (
+CREATE TABLE email_details (
 	email_id int IDENTITY(1,1) NOT NULL,
 	sender varchar(50) NOT NULL,
 	recipient varchar(50) NOT NULL,
 	email_subject varchar(150) NOT NULL,
 	email_body varchar(1000) NOT NULL,	
-	email_date date NOT NULL,
+	email_date datetime NOT NULL,
 	email_sent bit NOT NULL,
 	CONSTRAINT PK_email_id PRIMARY KEY (email_id)
 )
